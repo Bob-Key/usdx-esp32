@@ -2364,9 +2364,9 @@ void setup()
   si5351.powerDown();  // disable all CLK outputs (especially needed for si5351 variants that has CLK2 enabled by default, such as Si5351A-B04486-GT)
 
   //uint8_t mcusr = MCUSR;
-  MCUSR = 0;
+  //MCUSR = 0;
   //wdt_disable();
-  wdt_enable(WDTO_4S);  // Enable watchdog
+  //wdt_enable(WDTO_4S);  // TODO: Enable watchdog at the end of the project
   uint32_t t0, t1;
 #ifdef DEBUG
   // Benchmark dsp_tx() ISR (this needs to be done in beginning of setup() otherwise when VERSION containts 5 chars, mis-alignment impact performance by a few percent)
